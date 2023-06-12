@@ -29,7 +29,10 @@ To implement socket programming date and time display from client to server usin
 7. Stop
 
 **PROGRAM :**
-
+```
+Developed By: M Gautham
+Reg No: 212221230027
+```
 **CLIENT :**
 
 import socket
