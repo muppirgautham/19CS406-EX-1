@@ -1,13 +1,13 @@
 **19CS406-EX-1 STUDY OF SOCKET PROGRAMMING WITH CLIENT-SERVER MODEL**
 **DATE :09-03-2023**
 
-**AIM :**
+AIM :
 
 To implement socket programming date and time display from client to server using TCPSockets
 
-**ALGORITHM :**
+ALGORITHM :
 
-**Server:**
+Server:
 
 1. Create a server socket and bind it to port.
 2. Listen for new connection and when a connection arrives, accept it.
@@ -18,7 +18,8 @@ To implement socket programming date and time display from client to server usin
 7. Close all streams.
 8. Close the server socket.
 9. Stop.
-**Client:**
+
+Client:
 
 1. Create a client socket and connect it to the server‟s port number.
 2. Retrieve its own IP address using built-in function.
@@ -28,13 +29,13 @@ To implement socket programming date and time display from client to server usin
 6. Close the client socket.
 7. Stop
 
-**PROGRAM :**
+PROGRAM :
 ```
 Developed By: M Gautham
 Reg No: 212221230027
 ```
-**CLIENT :**
-
+CLIENT :
+```
 import socket
 from datetime import datetime
 s=socket.socket()
@@ -48,15 +49,25 @@ ack=c.recv(1024).decode()
 if ack:
     print(ack)
 c.close()
-**SERVER :**
-
+```
+SERVER :
+```
 import socket
 s=socket.socket()
 s.connect(('localhost',8000))
 print(s.getsockname())
 print(s.recv(1024).decode())
 s.send("acknowledgement recived from the server".encode())
-**OUTPUT: **
-https://user-images.githubusercontent.com/119641638/239670072-ca9fb508-e605-4042-a02c-7f5800e40d6c.png
-**RESULT:**
+```
+OUTPUT: 
+
+Client:
+
+![image](https://github.com/muppirgautham/19CS406-EX-1/assets/94810884/aa0758cb-7f11-49b4-9c58-2f2dc4f7f3fe).
+
+Server:
+
+![image](https://github.com/muppirgautham/19CS406-EX-1/assets/94810884/0c15e014-06e3-4ba9-8449-4fae4af4b217).
+
+RESULT:
 Thus, the program to implement socket programming date and time display from client to server using TCP Sockets was successfully executed.
